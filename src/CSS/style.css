@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('./modeBtns.css');
+
+:root {
+    --white: #ffffff;
+    --mintGreen: #3EBD93;
+    --eerieBlack: #1A1A1A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Electrolize', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.lightMode {
+    background-color: var(--mintGreen);
+    color: var(--white);
+    transition: background-color 0.5s, color 0.5s;
+
+}
+
+.darkMode {
+    background-color: var(--eerieBlack);
+    color: var(--white);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    height: 90vh;
+    border: 2px solid var(--white);
+}
+
+.title,
+.nav {
+    padding: 24px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 90vw;
+        height: 95vh;
+        border: 2px solid var(--white);
+
+    }
+}

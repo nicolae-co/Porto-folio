@@ -1,0 +1,19 @@
+{
+  "name": "porto-folio",
+  "version": "1.0.0",
+  "description": "Personal portofolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolae-co/Porto-folio.git"
+  },
+  "author": "Nicolae Cojocaru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolae-co/Porto-folio/issues"
+  },
+  "homepage": "https://github.com/nicolae-co/Porto-folio#readme"
+}
