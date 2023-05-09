@@ -3,15 +3,7 @@
     padding: 24px;
 }
 
-.mode-toggle-container button {
-    padding: 0;
-    font-size: inherit;
-    font-family: inherit;
-    border: none;
-    background-color: transparent;
-    color: inherit;
-    cursor: pointer;
-}
+
 
 .btn__light,
 .btn__dark {

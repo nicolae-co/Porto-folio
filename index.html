@@ -16,18 +16,36 @@
         <h3>Frontend Developer</h3>
       </section>
       <nav class="nav">
-        <ul>
-          <li><a href="#">Home </a></li>
-          <li><a href="#">Projects </a></li>
-          <li><a href="#">About </a></li>
-          <li><a href="#">Contact </a></li>
-        </ul>
+        <button class="nav__btn nav__btn--active resetBtn" data-nav="1">
+          Home
+        </button>
+        <button class="nav__btn resetBtn" data-nav="2">Projects</button>
+        <button class="nav__btn resetBtn" data-nav="3">About</button>
+        <button class="nav__btn resetBtn" data-nav="4">Contact</button>
       </nav>
+      <section class="content">
+        <div class="content__tab content__1 content__tab--active">
+          💥Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+          dolor?
+        </div>
+        <div class="content__tab content__2">
+          🥇Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Praesentium, quasi?
+        </div>
+        <div class="content__tab content__3">
+          🪩Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+          ullam?
+        </div>
+        <div class="content__tab content__4">
+          💩Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+          asperiores?
+        </div>
+      </section>
       <section class="mode-toggle-container">
-        <button class="btn__light">
+        <button class="btn__light resetBtn">
           <span class="checkbox-light"></span> LIGHT
         </button>
-        <button class="btn__dark">
+        <button class="btn__dark resetBtn">
           <span class="checkbox-dark"></span> DARK
         </button>
       </section>
