@@ -54,6 +54,12 @@ a {
     cursor: pointer;
 }
 
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .nav__btn--active {
     scale: 1.3;
 }
