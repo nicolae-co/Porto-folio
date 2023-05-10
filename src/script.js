@@ -60,7 +60,7 @@ const generateContantLinks = function (display) {
 const generateProjectsLinks = function (display) {
   if (projectsContent) {
     projectsContent.innerHTML = `
-      <a href="">Tic Tac Toe</a>
+      <a href="./src/ticTacToe/index.html">Tic Tac Toe</a>
       <a href="">Landing Page</a>
       <a href="">Weather App</a>
       <a href="">Expenses Tracker</a>
