@@ -8,6 +8,7 @@ const navContainer = document.querySelector(".nav");
 const navContent = document.querySelectorAll(".content__tab");
 
 const contactContent = document.querySelector(".content__4");
+const projectsContent = document.querySelector(".content__2");
 
 const body = document.querySelector("body");
 
@@ -55,6 +56,18 @@ const generateContantLinks = function (display) {
     contactContent.style.display = display;
   }
 };
+
+const generateProjectsLinks = function (display) {
+  if (projectsContent) {
+    projectsContent.innerHTML = `
+      <a href="">Tic Tac Toe</a>
+      <a href="">Landing Page</a>
+      <a href="">Weather App</a>
+      <a href="">Expenses Tracker</a>
+    `;
+    projectsContent.style.display = display;
+  }
+};
 // Implementing Nav Component
 navContainer.addEventListener("click", function (e) {
   const clicked = e.target.closest(".nav__btn");
@@ -62,6 +75,10 @@ navContainer.addEventListener("click", function (e) {
   clicked.dataset.nav === "4"
     ? generateContantLinks("flex")
     : generateContantLinks("none");
+
+  clicked.dataset.nav === "2"
+    ? generateProjectsLinks("flex")
+    : generateProjectsLinks("none");
 
   // Remove active btn
   navBtns.forEach((b) => b.classList.remove("nav__btn--active"));

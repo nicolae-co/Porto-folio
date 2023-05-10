@@ -127,19 +127,31 @@ main {
     padding: 24px;
 }
 
+.content__2 {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .content__4 {
     flex-direction: column;
     align-items: center;
 }
 
-.content__4 a {
+.content__2 a {
+    font-weight: 700;
+}
+
+.content__4 a,
+.content__2 a {
     width: fit-content;
     padding: 12px 24px;
     transition: transform 0.5s
 }
 
-.content__4 a:hover {
-    transform: translateY(-5px);
+.content__4 a:hover,
+.content__2 a:hover {
+    transform: translateX(-50px);
+    opacity: 1;
 }
 
 
@@ -151,5 +163,17 @@ main {
         height: 95vh;
         border: 2px solid var(--white);
 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .content__2 {
+        margin-right: 72px;
+        font-size: 48px;
+    }
+
+    .content__2 a {
+        opacity: 0.3;
+        padding: 24px 0 24px 0;
     }
 }
