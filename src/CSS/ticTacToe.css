@@ -2,7 +2,8 @@
 *::after,
 *::before {
     box-sizing: border-box;
-    margin: 0
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -10,9 +11,45 @@
     --mark-size: calc(var(--cell-size) * .9)
 }
 
+body {
+    background-color: salmon;
+}
+
+
+.page--content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    margin: 20px;
+}
+
+.backBtn {
+    border: 1px solid black;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.scores {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+
 .board {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -111,7 +148,7 @@
 .board.circle .cell:not(.x):not(.circle):hover::after {
     width: calc(var(--mark-size)*.7);
     height: calc(var(--mark-size)*.7);
-    background-color: white;
+    background-color: salmon;
 }
 
 .winning-message {

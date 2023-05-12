@@ -21,6 +21,14 @@ const winningMessageTextElement = document.querySelector(
 const restartBtn = document.getElementById("restartButton");
 let circleTurn;
 
+const backBtn = document.querySelector(".backBtn");
+
+const xScoreEl = document.querySelector(".x--score");
+const circleScoreEl = document.querySelector(".circle--score");
+
+let xScore = 0,
+  circleScore = 0;
+
 startGame();
 
 restartBtn.addEventListener("click", startGame);
@@ -45,6 +53,7 @@ function handleClick(e) {
   placeMark(cell, currentClass);
 
   if (checkWin(currentClass)) {
+    currentClass === "x" ? (xScore += 1) : (circleScore += 1);
     endGame(false);
   } else if (isDraw()) {
     endGame(true);
@@ -62,6 +71,7 @@ function endGame(draw) {
     winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} Wins!`;
   }
   winningMessageElement.classList.add("show");
+  updateScoreboard();
 }
 
 function isDraw() {
@@ -96,4 +106,10 @@ function checkWin(currentClass) {
       return cellElements[index].classList.contains(currentClass);
     });
   });
+}
+
+function updateScoreboard() {
+  console.log(xScore, circleScore);
+  xScoreEl.textContent = `X: ${xScore.toString()}`;
+  circleScoreEl.textContent = `O: ${circleScore.toString()}`;
 }

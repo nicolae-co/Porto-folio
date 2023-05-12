@@ -66,7 +66,7 @@ a {
 .nav__btn--active {
 
     scale: 1.3;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 @keyframes fadeIn {
@@ -85,7 +85,7 @@ a {
 
 .content__tab--active {
     display: block;
-    animation: fadeIn 1s ease-in;
+    animation: fadeIn 0.5s ease-in;
 }
 
 .logo {
@@ -148,11 +148,7 @@ main {
     transition: transform 0.5s
 }
 
-.content__4 a:hover,
-.content__2 a:hover {
-    transform: translateX(-50px);
-    opacity: 1;
-}
+
 
 
 
@@ -173,7 +169,20 @@ main {
     }
 
     .content__2 a {
-        opacity: 0.3;
+        opacity: 0.5;
         padding: 24px 0 24px 0;
+    }
+
+    .content__4 {
+        transition: transform 0.3s ease;
+    }
+
+    .content__4 a:hover {
+        transform: scale(1.5)
+    }
+
+    .content__2 a:hover {
+        transform: translateX(-50px);
+        opacity: 1;
     }
 }
