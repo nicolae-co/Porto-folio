@@ -2,12 +2,8 @@
 
 const colorsContainerElement = document.querySelector(".main");
 const newColorButton = document.querySelector(".nav__addNewColor");
-
+const resetColors = document.querySelector(".resetColors");
 const colorChildrens = colorsContainerElement.children;
-
-const markup = `
-    <div class="main__color"></div>
-    `;
 
 function randomColor() {
   const letters = "0123456789ABCDEF";
@@ -26,22 +22,30 @@ function addFiveColorsDivs() {
     colorsContainerElement.insertAdjacentHTML("beforeend", markup);
     colorsContainerElement.lastElementChild.style.backgroundColor =
       randomColor();
+    addRemoveBtn(colorsContainerElement.lastElementChild);
   }
-  addRemoveBtn();
 }
+
 function addNewColorDiv() {
+  const markup = `<div class="main__color color-${
+    colorChildrens.length + 1
+  }"></div>`;
   colorsContainerElement.insertAdjacentHTML("beforeend", markup);
   const lastChild = colorsContainerElement.lastElementChild;
-  lastChild.classList.add(`color-${colorChildrens.length}`);
   lastChild.style.backgroundColor = randomColor();
-  if ([...colorChildrens].length > 10) newColorButton.style.display = "none";
-  addRemoveBtn();
+  addRemoveBtn(lastChild);
+
+  console.log(colorChildrens.length);
+
+  if (colorChildrens.length > 9) {
+    newColorButton.style.display = "none";
+  }
 
   [...colorChildrens].forEach((el) => {
     const lockBtn = el.querySelector(".nav__lockColor");
     el.classList.contains("locked")
-      ? (lockBtn.textContent = "Unlock")
-      : (lockBtn.textContent = "Lock");
+      ? (lockBtn.innerHTML = `<img src="./svgs/lockClose.svg" />`)
+      : (lockBtn.innerHTML = `<img src="./svgs/lockOpen.svg" />`);
   });
 
   newColorButton.blur();
@@ -49,54 +53,60 @@ function addNewColorDiv() {
 
 newColorButton.addEventListener("click", addNewColorDiv);
 
-function addRemoveBtn() {
-  const colorsDiv = [...colorChildrens];
+function addRemoveBtn(el) {
   const markup = `
-  <button class="nav__removeColor"></button>
-  <button class="nav__lockColor">Lock</button>`;
-  colorsDiv.forEach((el) => {
-    el.innerHTML = markup;
+      <button class="nav__removeColor">
+        <img src="./svgs/minus.svg" />
+      </button>
+      <button class="nav__lockColor">
+        <img src="./svgs/lockOpen.svg" />
+      </button>      
+    `;
+  el.innerHTML = markup;
 
-    const removeBtn = el.querySelector(".nav__removeColor");
-    const lockBtn = el.querySelector(".nav__lockColor");
+  const removeBtn = el.querySelector(".nav__removeColor");
+  const lockBtn = el.querySelector(".nav__lockColor");
 
-    let isLocked = false;
+  let isLocked = false;
 
-    removeBtn.addEventListener("click", function () {
-      el.remove();
-      if ([...colorChildrens].length <= 10) console.log("test");
-      if ([...colorChildrens].length <= 10)
-        newColorButton.style.display = "block";
-    });
+  removeBtn.addEventListener("click", function () {
+    el.remove();
 
-    lockBtn.addEventListener("click", function () {
-      isLocked = !isLocked; // Toggle the locked state
-      lockBtn.blur();
+    if (colorChildrens.length <= 10) {
+      newColorButton.style.display = "block";
+    }
+  });
 
-      if (isLocked) {
-        el.classList.add("locked");
-        lockBtn.textContent = "Unlock";
-        // Add your code for the locked state
-      } else {
-        el.classList.remove("locked");
-        lockBtn.textContent = "Lock";
-        // Add your code for the unlocked state
-      }
-    });
+  lockBtn.addEventListener("click", function () {
+    isLocked = !isLocked; // Toggle the locked state
+    lockBtn.blur();
+
+    if (isLocked) {
+      el.classList.add("locked");
+      lockBtn.innerHTML = `<img src="./svgs/lockClose.svg" />`;
+      // Add your code for the locked state
+    } else {
+      el.classList.remove("locked");
+      lockBtn.innerHTML = `<img src="./svgs/lockOpen.svg" />`;
+      // Add your code for the unlocked state
+    }
+  });
+}
+
+function newRandomColors() {
+  [...colorChildrens].forEach((el) => {
+    if (!el.classList.contains("locked")) {
+      el.style.backgroundColor = randomColor();
+    }
   });
 }
 
 document.addEventListener("keydown", function (e) {
   if (e.keyCode === 32) {
-    [...colorChildrens].forEach((el) => {
-      if (!el.classList.contains("locked"))
-        el.style.backgroundColor = randomColor();
-    });
+    newRandomColors();
   }
 });
 
-function init() {
-  addFiveColorsDivs();
-}
+resetColors.addEventListener("click", newRandomColors);
 
-init();
+addFiveColorsDivs();
