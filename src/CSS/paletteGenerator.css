@@ -24,12 +24,15 @@ a {
     background-color: red;
     display: flex;
     align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.75);
+    z-index: 2;
 }
 
 .nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
+
 }
 
 .nav__backBtn {
@@ -71,6 +74,15 @@ a {
     transform: translate(-50%, -50%) rotate(90deg);
 }
 
+.nav__lockColor {
+    width: 2rem;
+    height: 2rem;
+}
+
+.locked {
+    background-color: grey;
+    color: white;
+}
 
 
 .main {
@@ -82,12 +94,19 @@ a {
 .main__color {
     flex: auto;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 8px 0px 10px -6px rgba(0, 0, 0, 0.75);
 }
 
 
 .footer {
     grid-area: 3 / 1 / 4 / 2;
     background-color: grey;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.75);
+    z-index: 2;
 }
 
 
@@ -99,5 +118,6 @@ a {
     .main__color {
         width: auto;
         min-height: 100px;
+        box-shadow: inset 0px 8px 20px -6px rgba(0, 0, 0, 0.75);
     }
 }
