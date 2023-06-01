@@ -5,43 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/CSS/style.css" />
-    <script defer src="./src/script.js"></script>
+    <script type="module" defer src="./src/script.js"></script>
+
     <title>Nicolae Cojocaru Portofolio</title>
   </head>
   <body class="lightMode">
+    <div class="modal">
+      <button class="close-modal">&times;</button>
+      <h1 class="modal-text">Work in progress!</h1>
+    </div>
     <main>
-      <section class="title">
-        <h1>Nicolae</h1>
-        <h1>Cojocaru</h1>
-        <h3>Frontend Developer</h3>
-      </section>
-      <nav class="nav">
-        <button class="nav__btn nav__btn--active resetBtn" data-nav="1">
-          Home
-        </button>
-        <button class="nav__btn resetBtn" data-nav="2">Projects</button>
-        <button class="nav__btn resetBtn" data-nav="3">Contact</button>
-        <button class="nav__btn resetBtn" data-nav="4">About</button>
-      </nav>
-      <section class="content">
-        <div class="content__tab content__1 content__tab--active">
-          <h2>
-            I am a determined, self-taught JavaScript developer who is committed
-            to lifelong learning and skill improvement.
-          </h2>
-        </div>
-        <div class="content__tab content__2"></div>
-        <div class="content__tab content__3">Contact form</div>
-        <div class="content__tab content__4"></div>
-      </section>
-      <section class="mode-toggle-container">
-        <button class="btn__light resetBtn">
-          <span class="checkbox-light"></span> LIGHT
-        </button>
-        <button class="btn__dark resetBtn">
-          <span class="checkbox-dark"></span> DARK
-        </button>
-      </section>
+      <div class="main">
+        <section class="title">
+          <h1>Nicolae</h1>
+          <h1>Cojocaru</h1>
+          <h3>Frontend Developer</h3>
+        </section>
+        <nav class="nav">
+          <button class="nav__btn nav__btn--active resetBtn" data-nav="1">
+            Home
+          </button>
+          <button class="nav__btn resetBtn" data-nav="2">Projects</button>
+          <button class="nav__btn resetBtn" data-nav="3">Contact</button>
+          <button class="nav__btn resetBtn" data-nav="4">About</button>
+        </nav>
+        <section class="content">
+          <div class="content__tab content__1 content__tab--active">
+            <h2>
+              I am a determined, self-taught JavaScript developer who is
+              committed to lifelong learning and skill improvement.
+            </h2>
+          </div>
+          <div class="content__tab content__2"></div>
+          <div class="content__tab content__3">Contact form</div>
+          <div class="content__tab content__4"></div>
+        </section>
+        <section class="mode-toggle-container">
+          <button class="btn__light resetBtn">
+            <span class="checkbox-light"></span> LIGHT
+          </button>
+          <button class="btn__dark resetBtn">
+            <span class="checkbox-dark"></span> DARK
+          </button>
+        </section>
+      </div>
     </main>
+    <div class="overlay"></div>
   </body>
 </html>

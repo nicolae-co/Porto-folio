@@ -96,3 +96,18 @@ navContainer.addEventListener("click", function (e) {
 window.addEventListener("load", function () {
   btnLight.childNodes[1].style.backgroundColor = "white";
 });
+
+// Modal script
+
+const modal = document.querySelector(".modal");
+const btnCloseModal = document.querySelector(".close-modal");
+const overlay = document.querySelector(".overlay");
+
+btnCloseModal.addEventListener("click", function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+});
+overlay.addEventListener("click", function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+});

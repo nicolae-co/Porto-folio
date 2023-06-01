@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 @import url('./modeBtns.css');
 
+
+
 :root {
     --white: #ffffff;
     --mintGreen: #3EBD93;
@@ -13,6 +15,7 @@
     box-sizing: border-box;
     font-family: 'Electrolize', sans-serif;
 }
+
 
 body {
     display: grid;
@@ -92,7 +95,7 @@ a {
     margin-right: 5px;
 }
 
-main {
+.main {
     display: grid;
     grid-template-columns: 0.7fr 1.3fr;
     grid-template-rows: 1fr 1.7fr 0.3fr;
@@ -149,16 +152,77 @@ main {
 }
 
 
+/* Modal Style */
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+
+    background-color: white;
+    padding: 6rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.modal-text {
+    color: #1A1A1A;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
 
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
 
+
+/* Media querys  */
 
 @media screen and (max-width: 768px) {
-    main {
+    .main {
         width: 90vw;
         height: 95vh;
         border: 2px solid var(--white);
 
+    }
+
+    .modal {
+        display: block;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .modal-text {
+        text-align: center;
+        transform: translate(-60%);
     }
 }
 
