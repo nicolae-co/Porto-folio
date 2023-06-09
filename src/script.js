@@ -62,8 +62,8 @@ const generateProjectsLinks = function (display) {
     projectsContent.innerHTML = `
       <a href="./src/ticTacToe/ticTacToe.html">Tic Tac Toe</a>
       <a href="./src/palleteGenerator/paletteGenerator.html">Palette Generator</a>
-      <a href="">Weather App</a>
-      <a href="">Expenses Tracker</a>
+      <a href="./src/WeightCalculator/WeightCalculator.html">Weight Calculator</a>
+      <a href="">Project...</a>
     `;
     projectsContent.style.display = display;
   }

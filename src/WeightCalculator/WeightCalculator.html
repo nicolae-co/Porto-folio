@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./WeightCalculator.css" />
+    <script defer src="day24.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <h1 class="title">Calculate a weight of an object on a planet</h1>
+      </div>
+      <div class="inputs">
+        <input id="massInput" placeholder="Mass in Kilograms" />
+        <select name="planets" id="planets">
+          <option value="select">select a planet</option>
+          <option value="mercury">Mercury</option>
+          <option value="venus">Venus</option>
+          <option value="earth">Earth</option>
+          <option value="mars">Mars</option>
+          <option value="jupiter">Jupiter</option>
+          <option value="saturn">Saturn</option>
+          <option value="uranus">Uranus</option>
+          <option value="neptune">Neptune</option>
+        </select>
+        <button id="calculateWeight">Calculate weight</button>
+      </div>
+      <div>
+        <h4 class="badSelect hidden">Please select a planet from the list!</h4>
+        <h4 class="badInput hidden">Please provide a valid number!</h4>
+        <div class="result">
+          <img id="planetImg" src="" />
+          <h1 id="weight"></h1>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
