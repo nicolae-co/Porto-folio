@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.title {
+    width: 100vw;
+    text-align: center;
+    padding: 16px;
+    background-color: whitesmoke;
+}
+
+.title h1 {
+    color: orange;
+}
+
+.menu {
+    width: 100vw;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 16px;
+    text-align: center;
+}
+
+.menu--btns {
+    display: flex;
+    justify-content: center;
+}
+
+.menu--btns button {
+    background-color: orange;
+    border: none;
+    padding: 8px 16px;
+    margin: 4px;
+    border-radius: 4px;
+}
+
+.menu--title {
+    padding-top: 4px;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+#chartPopulation,
+#chartLanguages {
+    width: 800px;
+    height: 400px;
+}
+
+.countriesLanguages {
+    display: none;
+}

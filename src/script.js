@@ -63,7 +63,8 @@ const generateProjectsLinks = function (display) {
       <a href="./src/ticTacToe/ticTacToe.html">Tic Tac Toe</a>
       <a href="./src/palleteGenerator/paletteGenerator.html">Palette Generator</a>
       <a href="./src/WeightCalculator/WeightCalculator.html">Weight Calculator</a>
-      <a href="">Project...</a>
+      <a href="./src/DataVisualization/dataVisualization.html">Data visualization</a>
+      <a href="./src/SearchBox/searchBox.html">Search box</a>
     `;
     projectsContent.style.display = display;
   }

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container,
+.results {
+    flex-grow: 1;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: hsla(141, 54%, 86%, 1);
+
+    background: linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#CAEFD7", endColorstr="#F5BFD7", GradientType=1);
+}
+
+.container--title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin: 24px;
+    font-size: 48px;
+}
+
+.title--count {
+    font-weight: 700;
+    margin: 12px;
+}
+
+.search--count {
+    margin: 12px;
+}
+
+
+
+/* Styling for the buttons section */
+div>button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+.btn--sort {
+    font-weight: bold;
+}
+
+.container--input {
+    margin-top: 6px;
+    margin-bottom: 24px;
+}
+
+/* Styling for the search input and button */
+.input {
+    width: 200px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.btn--search {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+.results {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background: hsla(141, 54%, 86%, 1);
+
+    background: linear-gradient(90deg, hsla(210, 81%, 22%, 1) 0%, hsla(141, 54%, 86%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(210, 81%, 22%, 1) 0%, hsla(141, 54%, 86%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(210, 81%, 22%, 1) 0%, hsla(141, 54%, 86%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#CAEFD7", endColorstr="#0B3866", GradientType=1);
+}
+
+.country {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #1F4101;
+    width: 150px;
+    height: 150px;
+    margin: 6px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
